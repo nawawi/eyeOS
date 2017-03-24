@@ -34,7 +34,7 @@ if(count(ob_get_status(true)) > 0) {
     ob_end_clean();  
 }
 
-error_reporting(E_ALL); 
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT & ~E_NOTICE);
 
 // Disable register_globals
 if (ini_get('register_globals')) {
